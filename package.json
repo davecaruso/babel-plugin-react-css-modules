@@ -1,9 +1,5 @@
 {
-  "author": {
-    "email": "gajus@gajus.com",
-    "name": "Gajus Kuizinas",
-    "url": "http://gajus.com"
-  },
+  "author": "Dave Caruso",
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.0.0",
     "@babel/types": "^7.0.0",
@@ -62,11 +58,12 @@
   ],
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
-  "name": "babel-plugin-react-css-modules",
+  "name": "@davecaruso/babel-plugin-react-css-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gajus/babel-plugin-react-css-modules"
+    "url": "https://github.com/davecaruso/babel-plugin-react-css-modules"
   },
+  "private": false,
   "scripts": {
     "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --source-maps --copy-files && npm run build-helper",
     "build-helper": "mkdir -p ./dist/browser && NODE_ENV=production babel ./src/getClassName.js --out-file ./dist/browser/getClassName.js --source-maps --no-babelrc --plugins @babel/plugin-transform-modules-commonjs,@babel/plugin-transform-flow-strip-types --presets @babel/preset-env  && npm run build-schema-helper",
@@ -74,5 +71,5 @@
     "lint": "eslint ./src && flow",
     "test": "jest"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
